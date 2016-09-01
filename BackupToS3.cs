@@ -8,7 +8,7 @@ namespace mySync
 {
     class BackupToS3 : IBackupActions
     {
-        void Transfer(string fileName)
+        void IBackupActions.Transfer(string fileName)
         {
         }
     }
