@@ -13,7 +13,7 @@ bin/
 obj/
 
 # VS files
-.suo
+*.suo
 
 # Windows Installer files
 *.cab
