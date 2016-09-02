@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace mySync
 {
-    class BackupToS3 : IBackupActions
+    class RestoreFromS3 : IRestoreActions
     {
-        bool IBackupActions.Transfer(string inFileName, JobDesc inJobDesc)
+        public bool Transfer(string inFileName, JobDesc inJobDesc)
         {
             return false;
         }

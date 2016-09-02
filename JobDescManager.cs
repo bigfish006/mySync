@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace mySync
 {
-    class BackupToS3 : IBackupActions
+    class JobDescManager
     {
-        bool IBackupActions.Transfer(string inFileName, JobDesc inJobDesc)
+        public List<JobDesc> mAllJobDesc;
+
+        public void Open()
         {
-            return false;
+            mAllJobDesc = new List<JobDesc>();
+
         }
     }
 }

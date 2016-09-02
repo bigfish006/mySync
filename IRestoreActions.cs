@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mySync
 {
-    interface IBackupActions
+    interface IRestoreActions
     {
         bool Transfer(string inFileName, JobDesc inJobDesc);
     }
