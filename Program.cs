@@ -19,18 +19,23 @@ namespace mySync
 
             Init();
 
-            while (Run())
-            {
-            }
+            Run();
         }
 
         static void Init()
         {
-            mJobMgr = new JobDescManager();
+            mJobMgr = new JobDeswcManager();
         }
 
-        static bool Run()
+        static void Run()
         {
+            do
+            {
+ClearUI();
+ShowJobsAvailable();
+WaitForInput();
+}
+while(true);
             return false;
         }
     }
