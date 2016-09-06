@@ -8,8 +8,9 @@ namespace mySync
 {
     class JobDesc
     {
-        public string mName;
-        public string mSrcFolder;
-        public string mDstFolder;
+        public string mName = null;
+        public string mGUID = null;
+        public string mSrcFolder = null;
+        public string mDstFolder = null;
     }
 }

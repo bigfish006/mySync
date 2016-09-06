@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace mySync
 {
-    class BackupToS3 : IBackupActions
+    interface IBackupActions
     {
-        void IBackupActions.Transfer(string fileName)
-        {
-        }
+        bool Transfer(string inFileName, JobDesc inJobDesc);
     }
 }

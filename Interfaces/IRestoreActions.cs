@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace mySync
 {
-    interface IBackupActions
+    interface IRestoreActions
     {
-        void Transfer(string fileName);
+        bool Transfer(string inFileName, JobDesc inJobDesc);
     }
 }
