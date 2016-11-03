@@ -49,7 +49,7 @@ namespace mySync
             int idx = 0;
             foreach (var job in mJobMgr.mAllJobDesc)
             {
-                Console.WriteLine("Job {0}: {1}", idx, job.mName);
+                Console.WriteLine("Job {0}: {1}", idx++, job.mName);
             }
         }
 
@@ -71,7 +71,8 @@ namespace mySync
             }
             catch(Exception ex)
             {
-                Console.WriteLine("Failed to find index: {0}\nMessage: {1}", cki.KeyChar, ex.Message);
+                Console.WriteLine("Failed to find index: {0}\nMessage: {1}\nPress any key to continue", cki.KeyChar, ex.Message);
+                Console.ReadKey();
             }
 
             Thread.Sleep(1000);
