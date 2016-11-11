@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace mySync
+namespace mySync.Jobs
 {
     class JobDesc
     {
@@ -12,5 +12,14 @@ namespace mySync
         public Guid     mGUID;
         public string   mSrcFolder = null;
         public string   mDstFolder = null;
+
+        public Job StartJob()
+        {
+            Job newJob = new Job(this);
+
+            newJob.Start();
+
+            return newJob;
+        }
     }
 }

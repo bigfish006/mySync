@@ -4,15 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace mySync
+namespace mySync.Jobs
 {
     class JobDescManager
     {
-        public List<JobDesc> mAllJobDesc = null;
+        public List<JobDesc>    mAllJobDesc = null;
+        public List<Job>        mAllJobs = null;
 
         public void Open()
         {
             mAllJobDesc = new List<JobDesc>();
+            mAllJobs = new List<Job>();
 
             PushTestJobs();
             ReadJobs();
@@ -41,6 +43,27 @@ namespace mySync
 
         private void ReadJobs()
         {
+        }
+
+        public void StartJob(Guid inGuid)
+        {
+            // already running?
+            foreach(var job in mAllJobs)
+            {
+                if(job.isActive && job.mParentDesc.mGUID == inGuid)
+                {
+                    Console.WriteLine("Job with Guid {0} already running", inGuid);
+                    return;
+                }
+            }
+
+            // not found, try to create
+            JobDesc desc = mAllJobDesc.Find(x => x.mGUID == inGuid);
+            if (desc != null)
+            {
+                Job newJob = desc.StartJob();
+                mAllJobs.Add(newJob);
+            }
         }
     }
 }
