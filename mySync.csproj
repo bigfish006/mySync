@@ -45,6 +45,7 @@
     <Compile Include="Database.cs" />
     <Compile Include="Interfaces\IBackupActions.cs" />
     <Compile Include="Interfaces\IRestoreActions.cs" />
+    <Compile Include="Jobs\Job.cs" />
     <Compile Include="Jobs\JobDesc.cs" />
     <Compile Include="Jobs\JobDescManager.cs" />
     <Compile Include="Program.cs" />

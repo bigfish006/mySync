@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using mySync.Jobs;
 
 namespace mySync
 {
@@ -68,6 +69,8 @@ namespace mySync
             try
             {
                 Console.WriteLine("Selected {0}", mJobMgr.mAllJobDesc[indexPressed].mName);
+
+                mJobMgr.StartJob(mJobMgr.mAllJobDesc[indexPressed].mGUID);
             }
             catch(Exception ex)
             {
