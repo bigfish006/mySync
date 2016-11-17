@@ -24,7 +24,7 @@ namespace mySync.Jobs
         {
             {
                 JobDesc test = new JobDesc();
-                test.mName = "Test Job1";
+                test.mName = "Test Job0";
                 test.mGUID = Guid.NewGuid();
                 test.mSrcFolder = "c:\temp";
                 test.mDstFolder = "c__temp";
@@ -33,7 +33,7 @@ namespace mySync.Jobs
 
             {
                 JobDesc test2 = new JobDesc();
-                test2.mName = "Test Job2";
+                test2.mName = "Test Job1";
                 test2.mGUID = Guid.NewGuid();
                 test2.mSrcFolder = "c:\temp2";
                 test2.mDstFolder = "c__temp2";
